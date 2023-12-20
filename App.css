@@ -1,0 +1,219 @@
+
+body, h1, h2, ul, li, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply a box-sizing border-box to everything */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/* Apply a max-width and center the content in the root element */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  font-family: 'Comic Sans MS', cursive; /* A playful font */
+  background-color: #c15151; /* Light background color */
+  margin: 0;
+  overflow: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Container for the entire app */
+.App {
+  text-align: center;
+  padding: 20px;
+  background-color: #c29595;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+/* Fun and colorful styles for the Waste Management Game title */
+.App h1 {
+  color: #ff66b2; /* Pink color */
+  font-size: 2em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  animation: bounce 1s infinite alternate;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+/* Game component styles */
+.Game {
+  background-color: #ffd700; /* Gold color */
+  border: 2px solid #ff9933; /* Orange border */
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Leaderboard component styles */
+.Leaderboard {
+  margin-top: 20px;
+}
+
+/* Leaderboard title styles */
+.Leaderboard h2 {
+  color: #ff6666; /* Red color */
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* List item styles in the Leaderboard */
+.Leaderboard li {
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Camera component styles */
+.Camera {
+  margin-top: 20px;
+}
+
+/* Score display styles in the Game component */
+.Game h2 {
+  color: #00cc66; /* Green color */
+}
+
+/* File input styles in the Camera component */
+.Camera input[type="file"] {
+  display: none;
+}
+
+/* Submit button styles in the Camera component */
+.Camera button {
+  background-color: #4db8ff; /* Light blue color */
+  color: #ffffff;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the submit button */
+.Camera button:hover {
+  background-color: #3a92cc; /* Slightly darker blue on hover */
+}
+
+/* Uploaded image styles in the Camera component */
+.Camera img {
+  max-width: 100%;
+  margin-top: 20px;
+  border-radius: 15px;
+  animation: pulse 1s infinite alternate;
+}
+
+/* Pulse animation for the uploaded image */
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/* Additional styling for a playful touch */
+.Game,
+.Leaderboard,
+.Camera {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.Game::before,
+.Leaderboard::before,
+.Camera::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 5px;
+  background-color: #3498db;
+  border-radius: 5px;
+}
+
+/* Styles for the responsive layout */
+@media (max-width: 600px) {
+  .App {
+    max-width: 90%;
+  }
+}
+
+/* Additional styling for a playful touch */
+.Game,
+.Leaderboard,
+.Camera {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Decorative element before each game component */
+.Game::before,
+.Leaderboard::before,
+.Camera::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 5px;
+  background-color: #3498db;
+  border-radius: 5px;
+}
+
+/* Additional styling for the interactive elements */
+.Game button,
+.Leaderboard li,
+.Camera button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for the interactive elements */
+.Game button:hover,
+.Leaderboard li:hover,
+.Camera button:hover {
+  background-color: #3a92cc; /* Slightly darker blue on hover */
+  transform: scale(1.05); /* Enlarge on hover */
+}
+
+/* Responsive layout styles */
+@media (max-width: 600px) {
+  .App {
+    max-width: 90%;
+  }
+}
