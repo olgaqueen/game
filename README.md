@@ -1,5 +1,8 @@
 # Waste Management Game
 
+
+![Alt text](<../Screenshot 2023-12-20 at 7.40.22 PM.png>)
+
 Welcome to the Waste Management Game! This project allows users to participate in a game focused on waste management and environmental awareness.
 
 ## Table of Contents
